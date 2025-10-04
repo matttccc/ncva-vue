@@ -1,0 +1,406 @@
+@import './base.css';
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #111143;
+  background-color: #E3E0D9;
+  font-weight: 400;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.875rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--color-link);
+  color: white;
+  border: 2px solid var(--color-link);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-link);
+  border-color: var(--color-link);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-link);
+  border: 2px solid var(--color-link);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-link);
+  color: white;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #223381;
+  border: 2px solid #223381;
+}
+
+.btn-outline:hover {
+  background-color: #223381;
+  color: white;
+}
+
+/* Font Weight Utilities */
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+
+/* Common Component Styles */
+.hero {
+  background: linear-gradient(135deg, #0f1638 0%, #1e3c72 50%, #2a5298 100%);
+  color: white;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-section {
+  background: #111143 url('../assets/pattern.svg') repeat top right;
+  background-size: 40% auto;
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 60px;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+
+
+/* Page Layout System */
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+  padding: 60px 0;
+  width: 100%;
+}
+.page-content h2 {
+  margin-bottom: 30px;
+}
+
+/* Content Sections */
+.content-section {
+  padding: 4rem 0;
+}
+
+.content-section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+  font-size: 2.5rem;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.content-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+}
+
+.content-card h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.content-card p {
+  color: #7F7F88;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Section Styles */
+.division-section, .news-section, .league-section {
+  background: white;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.division-section h2, .news-section h2, .league-section h2 {
+  margin-bottom: 1rem;
+}
+
+.league-loading {
+  text-align: center;
+  padding: 2rem;
+}
+
+.league-loading p {
+  color: #B8B0A3;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.league-tabs {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  padding: 0.5rem 1rem;
+  background: #f0f0f0;
+  border: 1px solid #494A53;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.tab-button:hover {
+  background: #e0e0e0;
+}
+
+.tab-button.active {
+  background: var(--color-link);
+  color: white;
+  border-color: var(--color-link);
+}
+
+.news-item {
+  margin-bottom: 0.5rem;
+}
+
+.news-link {
+  color: var(--color-link);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.news-link:hover {
+  text-decoration: underline;
+}
+
+.league-section h3 {
+  margin-bottom: 0.5rem;
+}
+
+.league-section h4 {
+  margin-bottom: 1rem;
+}
+
+.direct-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.download-link {
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-section {
+    padding: 2rem 0;
+  }
+
+  .content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .content-card {
+    padding: 1.5rem;
+  }
+
+  .hero {
+    padding: 2rem 0;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    max-width: none;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .volleyball-graphic {
+    width: 200px;
+    height: 200px;
+  }
+
+  .volleyball {
+    width: 80px;
+    height: 80px;
+  }
+
+  .net {
+    width: 150px;
+  }
+
+
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .division-section, .news-section, .league-section {
+    padding: 1rem;
+  }
+
+  .league-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab-button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
