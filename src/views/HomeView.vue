@@ -475,7 +475,7 @@ onMounted(() => {
   margin: -120px 0 40px;
   border-radius: 12px;
   display: flex;
-  gap: 2rem;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
@@ -562,8 +562,8 @@ onMounted(() => {
 @media (max-width: 768px) {
   .download-cards-section {
     flex-direction: column;
-    padding: 1.5rem;
-    margin: 1.5rem 0;
+    padding: 20px;
+    gap: 20px;
   }
 
   .download-card {
@@ -578,6 +578,10 @@ onMounted(() => {
 
   .download-btn {
     align-self: center;
+  }
+
+  .hero-box {
+    width: 40%;
   }
 }
 </style>
