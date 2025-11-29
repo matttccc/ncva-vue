@@ -68,7 +68,6 @@ h6 {
   padding: 0.75rem 2rem;
   border-radius: 5px;
   text-decoration: none;
-  font-weight: 500;
   transition: all 0.3s ease;
   display: inline-block;
   border: none;
@@ -139,8 +138,8 @@ h6 {
 }
 
 .hero-section {
-  background: #111143 url('../assets/pattern.svg') repeat top right;
-  background-size: 40% auto;
+  background: #111143 url('../assets/pattern-new-4.svg') no-repeat center -38px;
+  background-size: auto 1590px;
   color: white;
   padding: 4rem 0;
   text-align: center;

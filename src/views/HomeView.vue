@@ -349,13 +349,16 @@ onMounted(() => {
   }
 }
 /*********************** Table rows ***********************/
+.home-tables .home-table .results-table {
+  margin-bottom: 5px;
+}
 
 .home-tables .home-table .results-table table {
   width: 100% !important;
   max-width: 100% !important;
   text-align: center !important;
   display: block !important;
-  margin: 0 auto 15px !important;
+  margin: 0 auto 0px !important;
   overflow-x: auto !important;
   overflow-y: hidden !important;
   white-space: nowrap !important;
@@ -363,6 +366,9 @@ onMounted(() => {
   border-collapse: separate !important;
   border-spacing: 0 5px !important;
   padding: 0px !important;
+  background: #f4f3f1;
+  padding: 0px 5px !important;
+  border-radius: 10px;
 }
 .home-tables .home-table .results-table tbody tr {
   border-radius: 5px !important;
@@ -439,7 +445,7 @@ onMounted(() => {
   display: inline-flex;
   padding: 6px 10px;
   margin-right: 5px;
-  background: var(--color-background-light);
+  // background-color: var(--color-white);
   border-radius: 5px;
   width: 100%;
   justify-content: center;
@@ -450,22 +456,11 @@ onMounted(() => {
   font-size: 11px;
   transition: all 0.15s ease;
 }
-@media screen and (max-width: 768px) {
-  .buttons a {
-    padding: 3px 10px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .buttons a {
-    padding: 2px 10px;
-  }
-}
 .buttons a:last-child {
   margin-right: 0px;
 }
 .buttons a:hover {
-  background-color: var(--color-white);
-  transform: translateY(-2px);
+  background: var(--color-background-light);
 }
 
 /* Download Cards Section */
