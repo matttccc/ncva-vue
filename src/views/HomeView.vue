@@ -408,6 +408,7 @@ onMounted(() => {
   min-width: auto !important;
   white-space: normal;
   line-height: 1.25;
+  font-weight: 600;
 }
 .home-tables .home-table .results-table tr td:nth-child(3) {
   width: 25px !important;
@@ -468,7 +469,7 @@ onMounted(() => {
   background: var(--color-white);
   padding: 2rem;
   margin: -120px 0 40px;
-  border-radius: 12px;
+  border-radius: 24px;
   display: flex;
   gap: 30px;
   flex-wrap: wrap;

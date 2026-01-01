@@ -138,8 +138,11 @@ h6 {
 }
 
 .hero-section {
-  background: #111143 url('../assets/pattern-new-4.svg') no-repeat center -38px;
-  background-size: auto 1590px;
+  background: #111143 url('../assets/pattern-new-4.svg') no-repeat center center;
+  background: #111143 url('../assets/pattern-lines-2.svg') repeat center center;
+  background: #111143 url('../assets/pattern-curved-lines-2.svg') no-repeat center center;
+  background-size: auto 2600px;
+  background-size: auto 2400px;
   color: white;
   padding: 4rem 0;
   text-align: center;
